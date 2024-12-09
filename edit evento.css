@@ -1,0 +1,269 @@
+/* Seção da agenda */
+
+.agenda-evento {
+    position: fixed; /* Fixa a camada de fundo */
+    top: 70;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Preenche toda a tela */
+    background-color: rgba(0, 0, 0, 0.5); /* Opacidade no fundo */
+    z-index: 1; /* Garante que a camada de fundo fique atrás dos outros elementos */
+}
+
+.agenda-evento .content {
+    position: relative; /* Garante que o conteúdo fique acima da camada de opacidade */
+    z-index: 1000; /* Coloca o conteúdo acima da camada de opacidade */
+    color: white; /* Cor do conteúdo */
+    padding: 89px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: -35px;
+    display: flex; flex-direction: column;
+    
+}
+
+.form-container {
+    width: 100%;
+    height: 510px;
+    max-width: 1000px;
+    margin:auto;
+    padding: 20px;
+    background-color: #5214cb;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: -75px;
+    height: 669px;
+}
+
+   
+.close-btn-evento {
+    position: relative; /* Posiciona o botão de fechar */
+    top: -65px; /* Distância do topo */
+    right: -985px; /* Distância da direita */
+    font-size: 35px; /* Tamanho da fonte */
+    color: rgb(243, 243, 243); /* Cor do botão */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    z-index: 1000;
+    text-decoration: none; 
+}
+
+.close-btn-evento :hover{
+    transition: background-color 0.3s;
+    background-color: rgb(74, 36, 180);
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+
+
+/* Estilo de inputs e selects para consistência */
+.input-group {
+    display: inline-flex; /* Flex para alinhamento horizontal */
+    flex-direction: column; /* Empilha label e input/select verticalmente */
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+    margin-bottom: 20px;
+    width: 48%; /* Garante que dois grupos cabem lado a lado */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    
+}
+
+/* Estilização dos labels */
+.input-group label {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+    width: 100%; /* Garante que o label ocupa toda a largura do input */
+}
+
+/* Estilos gerais de inputs e selects */
+.input-group input,
+.input-group select {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: rgb(0, 0, 0); /* Cor do texto */
+    width: 40%; /* Ocupa toda a largura do contêiner */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilo da área de texto (textarea) */
+.inputUser {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid rgb(255, 255, 255) #f8f8f8;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 100%; /* Faz com que ocupe a largura total do contêiner */
+    box-sizing: border-box;
+}
+
+/* Placeholder estilizado */
+.inputUser::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Efeito hover */
+.inputUser:hover {
+    border-color: #888; /* Mudança de cor ao passar o mouse */
+}
+
+/* Estilo para a área de texto (textarea) */
+.inputUser {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid rgb(255, 255, 255) #f8f8f8;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 40%; /* Faz com que ocupe a largura total do contêiner */
+    height: 60px;
+    box-sizing: border-box;
+}
+
+/* Placeholder estilizado */
+.inputUser::placeholder {
+    color: #aaa;
+    font-style: Montserrat;
+}
+
+/* Efeito hover */
+.inputUser:hover {
+    border-color: #888; /* Mudança de cor ao passar o mouse */
+}
+
+.image-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+}
+.image-row label {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: -450px;
+    justify-content: center;
+    margin-left: -20px;
+}
+
+.image-preview img {
+    margin-top: 10px;
+    display: none;
+    max-width: 100%; /* Garante que a imagem se ajuste */
+}
+
+
+    /* Esconde o input de arquivo */
+    #imagem {
+        display: none;
+    }
+
+    /* Estilo personalizado para o botão de escolha de arquivo */
+    .custom-file-button {
+        display: inline-block;
+        background-color: rgb(40, 71, 185);
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-right: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }   
+    
+    .custom-file-button:hover {
+        background-color: #2b18b9;
+    }
+    
+    .custom-file-button:active {
+        background-color: #4857a1;
+    }
+    
+    /* Estilo do campo de texto */
+    #file-name {
+        width: 200px;
+        padding: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Estilo para a pré-visualização da imagem */
+    .image-preview {
+        margin-top: 10px;
+    }
+
+.login-btn-evento {
+    position: relative; 
+    top: -35px;
+    right: -770px; 
+    width: 10%;
+    padding: 10px; 
+    background-color: #0db400;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 4px solid black;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 0px , #0db400  /* Sombra superior para profundidade */
+                0px 7px 15px rgba(0, 0, 0, 0.2);  /* Sombra geral para efeito 3D */
+    transition: all 0.3s ease-in-out;  /* Suaviza a animação */
+
+
+}
+.login-btn-evento:active{
+
+    box-shadow: 0px 2px 0px ,  #0db400 /* Sombra ao pressionar, simulando o botão "afundar" */
+                0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(3px);        /* Move o botão para baixo */
+}
+
+.login-btn-evento:hover {
+    background-color: #0db400;
+}
+
+.Cancel-btn-evento {
+    position: relative; 
+    right: -785px; 
+    top:-35px;
+    width: 10%;
+    padding: 10px; 
+    background-color: rgba(206, 35, 35, 0.89);
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 4px solid black;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 5px 0px , #cf1111  /* Sombra superior para profundidade */
+                0px 7px 15px rgba(0, 0, 0, 0.2);  /* Sombra geral para efeito 3D */
+    transition: all 0.3s ease-in-out;  /* Suaviza a animação */
+
+
+}
+.Cancel-btn-evento:active{
+
+    box-shadow: 0px 2px 0px ,  #bd1010 /* Sombra ao pressionar, simulando o botão "afundar" */
+                0px 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(3px);        /* Move o botão para baixo */
+}
+
+.Cancel-btn-evento:hover {
+    background-color: #f53e3e;
+}
+
+/* Ocultar o input file */
+.hidden-file-input {
+    display: none;
+}
+
